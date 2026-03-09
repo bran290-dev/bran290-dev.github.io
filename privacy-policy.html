@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>개인정보처리방침 / Privacy Policy — 데브랜 (Devran) · Transy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#1a2a4a",
+                    "accent": "#3d6cc0",
+                    "background-light": "#f6f6f8",
+                    "background-dark": "#101622",
+                },
+                fontFamily: {
+                    "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+    .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+    .sidebar-scroll::-webkit-scrollbar-thumb { background-color: #e2e8f0; border-radius: 20px; }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    .lang-btn.active { background-color: #1a2a4a; color: #fff; }
+</style>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased">
+<div class="min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center justify-center size-10 rounded-lg bg-blue-50 text-accent">
+          <span class="material-symbols-outlined text-[24px]">translate</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-primary">데브랜 <span class="text-accent">devran</span></h1>
+          <p class="text-xs font-medium text-slate-500">Transy App</p>
+        </div>
+      </div>
+      <!-- Language Toggle -->
+      <div class="flex items-center gap-2">
+        <button class="lang-btn active px-4 py-1.5 rounded-full border border-primary text-sm font-semibold text-primary transition-colors" onclick="switchLang('ko')">한국어</button>
+        <button class="lang-btn px-4 py-1.5 rounded-full border border-primary text-sm font-semibold text-primary transition-colors" onclick="switchLang('en')">English</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Content Wrapper -->
+<div class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+  <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+
+    <!-- Sidebar -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <nav class="sticky top-24 sidebar-scroll max-h-[calc(100vh-8rem)] overflow-y-auto pr-4">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4" id="toc-label">목차</h2>
+        <ul class="space-y-1" id="toc-ko">
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#intro"><span class="material-symbols-outlined text-[18px]">info</span>소개</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#collect"><span class="material-symbols-outlined text-[18px]">database</span>1. 수집하는 정보</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#no-collect"><span class="material-symbols-outlined text-[18px]">block</span>2. 수집하지 않는 정보</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#purpose"><span class="material-symbols-outlined text-[18px]">target</span>3. 사용 목적</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#third-party"><span class="material-symbols-outlined text-[18px]">share</span>4. 제3자 서비스</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#retention"><span class="material-symbols-outlined text-[18px]">history</span>5. 데이터 보관</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#security"><span class="material-symbols-outlined text-[18px]">lock</span>6. 데이터 보안</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#children"><span class="material-symbols-outlined text-[18px]">child_care</span>7. 아동 보호</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#rights"><span class="material-symbols-outlined text-[18px]">verified_user</span>8. 사용자 권리</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#changes"><span class="material-symbols-outlined text-[18px]">edit_note</span>9. 방침 변경</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#contact"><span class="material-symbols-outlined text-[18px]">mail</span>10. 연락처</a></li>
+        </ul>
+        <ul class="space-y-1 hidden" id="toc-en">
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#intro"><span class="material-symbols-outlined text-[18px]">info</span>Introduction</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#collect"><span class="material-symbols-outlined text-[18px]">database</span>1. Information We Collect</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#no-collect"><span class="material-symbols-outlined text-[18px]">block</span>2. Not Collected</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#purpose"><span class="material-symbols-outlined text-[18px]">target</span>3. Purpose of Use</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#third-party"><span class="material-symbols-outlined text-[18px]">share</span>4. Third-Party Services</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#retention"><span class="material-symbols-outlined text-[18px]">history</span>5. Data Retention</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#security"><span class="material-symbols-outlined text-[18px]">lock</span>6. Data Security</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#children"><span class="material-symbols-outlined text-[18px]">child_care</span>7. Children's Privacy</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#rights"><span class="material-symbols-outlined text-[18px]">verified_user</span>8. Your Rights</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#changes"><span class="material-symbols-outlined text-[18px]">edit_note</span>9. Policy Changes</a></li>
+          <li><a class="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" href="#contact"><span class="material-symbols-outlined text-[18px]">mail</span>10. Contact Us</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="lg:col-span-9">
+      <div class="prose prose-slate max-w-none">
+
+        <!-- Page Title -->
+        <div class="mb-10 border-b border-slate-200 pb-8" id="intro">
+          <h1 class="text-4xl font-black tracking-tight text-primary mb-2">개인정보처리방침 <span class="text-2xl font-medium text-slate-500">/ Privacy Policy</span></h1>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500 mt-3">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span>시행일 / Effective: 2025-01-01</span>
+            <span class="text-slate-300">|</span>
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">update</span>최종 수정 / Updated: 2026-02-25</span>
+          </div>
+        </div>
+
+        <!-- ══ 한국어 섹션 ══ -->
+        <div class="lang-section active" id="section-ko">
+          <p class="text-base leading-relaxed text-slate-700 mb-10">
+            <strong>Transy (데브랜 / devran)</strong>(이하 "앱")는 사용자의 개인정보를 중요하게 생각하며, 관련 법령을 준수합니다.
+            본 개인정보처리방침은 앱이 수집하는 정보와 그 사용 방법에 대해 설명합니다.
+          </p>
+
+          <!-- 1. 수집하는 정보 -->
+          <section class="mb-12 scroll-mt-28" id="collect">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">database</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">1. 수집하는 정보</h2>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800 mb-3">1.1 사용자가 직접 제공하는 정보</h3>
+            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white mb-4">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-5 py-3 font-semibold text-primary">정보 유형</th>
+                    <th class="px-5 py-3 font-semibold text-primary">설명</th>
+                    <th class="px-5 py-3 font-semibold text-primary">저장 위치</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">Gemini API 키</td>
+                    <td class="px-5 py-3 text-slate-600">번역 기능 사용을 위해 사용자가 직접 입력</td>
+                    <td class="px-5 py-3 text-slate-600">기기 로컬 저장소 (암호화)</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">소설 URL</td>
+                    <td class="px-5 py-3 text-slate-600">사용자가 추가한 웹소설 주소</td>
+                    <td class="px-5 py-3 text-slate-600">기기 로컬 저장소</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">앱 설정</td>
+                    <td class="px-5 py-3 text-slate-600">폰트 크기, TTS 설정 등 사용자 환경설정</td>
+                    <td class="px-5 py-3 text-slate-600">기기 로컬 저장소</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-lg bg-blue-50 border-l-4 border-accent text-sm text-slate-700 mb-6">
+              <span class="material-symbols-outlined text-accent text-[20px] mt-0.5">info</span>
+              <span><strong>중요</strong>: 위 정보는 모두 사용자의 기기에만 저장되며, 개발자 서버로 전송되지 않습니다.</span>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800 mb-3">1.2 자동으로 수집되는 정보</h3>
+            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-5 py-3 font-semibold text-primary">정보 유형</th>
+                    <th class="px-5 py-3 font-semibold text-primary">목적</th>
+                    <th class="px-5 py-3 font-semibold text-primary">수집 주체</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">크래시 로그</td>
+                    <td class="px-5 py-3 text-slate-600">앱 오류 분석 및 품질 개선</td>
+                    <td class="px-5 py-3 text-slate-600">Firebase Crashlytics</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">광고 ID</td>
+                    <td class="px-5 py-3 text-slate-600">맞춤형 광고 제공</td>
+                    <td class="px-5 py-3 text-slate-600">Google AdMob</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 2. 수집하지 않는 정보 -->
+          <section class="mb-12 scroll-mt-28" id="no-collect">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-red-50 text-red-500"><span class="material-symbols-outlined text-[24px]">block</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">2. 수집하지 않는 정보</h2>
+            </div>
+            <p class="text-slate-700 mb-4">앱은 다음 정보를 <strong>수집하지 않습니다</strong>:</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>이름, 이메일, 전화번호 등 개인 식별 정보</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>금융 정보 (인앱 결제는 Google Play Billing을 통해 처리)</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>위치 정보</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>연락처 또는 사진</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>기기의 다른 앱 정보</li>
+            </ul>
+          </section>
+
+          <!-- 3. 사용 목적 -->
+          <section class="mb-12 scroll-mt-28" id="purpose">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">target</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">3. 정보의 사용 목적</h2>
+            </div>
+            <p class="text-slate-700 mb-4">수집된 정보는 다음 목적으로만 사용됩니다:</p>
+            <ul class="space-y-4">
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">1</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">앱 기능 제공</h3><p class="text-sm text-slate-600">번역 서비스 실행 및 사용자 설정 유지</p></div>
+              </li>
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">2</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">품질 개선</h3><p class="text-sm text-slate-600">크래시 분석을 통한 버그 수정</p></div>
+              </li>
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">3</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">광고 표시</h3><p class="text-sm text-slate-600">Google AdMob을 통한 광고 제공</p></div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- 4. 제3자 서비스 -->
+          <section class="mb-12 scroll-mt-28" id="third-party">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">share</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">4. 제3자 서비스</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google Gemini API</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>목적</strong>: AI 기반 번역 서비스 제공</div>
+                  <div><strong>전송 데이터</strong>: 번역할 소설 원문 텍스트</div>
+                  <a class="text-accent text-xs hover:underline" href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Firebase Crashlytics</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>목적</strong>: 앱 크래시 분석 및 안정성 개선</div>
+                  <div><strong>전송 데이터</strong>: 크래시 로그, 기기 정보</div>
+                  <a class="text-accent text-xs hover:underline" href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase Privacy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google AdMob</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>목적</strong>: 광고 표시</div>
+                  <div><strong>전송 데이터</strong>: 광고 ID, 광고 상호작용 정보</div>
+                  <a class="text-accent text-xs hover:underline" href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">Google Ads Privacy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google Play Billing</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>목적</strong>: 프리미엄 기능 결제 처리</div>
+                  <div><strong>전송 데이터</strong>: 결제 정보는 Google이 직접 처리</div>
+                  <a class="text-accent text-xs hover:underline" href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" rel="noopener" target="_blank">Google Payments Privacy →</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. 데이터 보관 -->
+          <section class="mb-12 scroll-mt-28" id="retention">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">history</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">5. 데이터 보관 및 삭제</h2>
+            </div>
+            <div class="space-y-4">
+              <div class="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                <h3 class="font-semibold text-slate-900 mb-2">5.1 로컬 데이터</h3>
+                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                  <li>모든 사용자 데이터는 기기에 저장됩니다</li>
+                  <li>앱 삭제 시 모든 로컬 데이터가 자동으로 삭제됩니다</li>
+                  <li>설정 메뉴에서 언제든지 데이터를 수동으로 삭제할 수 있습니다</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                <h3 class="font-semibold text-slate-900 mb-2">5.2 제3자 서비스 데이터</h3>
+                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                  <li>Firebase 및 AdMob 데이터는 각 서비스의 보관 정책을 따릅니다</li>
+                  <li>데이터 삭제를 원하시면 아래 연락처로 요청해 주세요</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. 데이터 보안 -->
+          <section class="mb-12 scroll-mt-28" id="security">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-green-50 text-green-600"><span class="material-symbols-outlined text-[24px]">lock</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">6. 데이터 보안</h2>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">key</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">Android Keystore 암호화</div>
+                <div class="text-xs text-slate-500">API 키 암호화 저장</div>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">https</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">HTTPS/TLS 암호화</div>
+                <div class="text-xs text-slate-500">모든 네트워크 통신 암호화</div>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">cloud_off</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">서버 미전송</div>
+                <div class="text-xs text-slate-500">민감 데이터 외부 전송 없음</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. 아동 보호 -->
+          <section class="mb-12 scroll-mt-28" id="children">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-purple-50 text-purple-600"><span class="material-symbols-outlined text-[24px]">child_care</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">7. 아동 개인정보 보호</h2>
+            </div>
+            <p class="text-slate-700">앱은 <strong>13세 미만 아동을 대상으로 하지 않습니다</strong>. 13세 미만 아동의 개인정보를 의도적으로 수집하지 않으며, 해당 정보가 수집된 것을 인지하는 경우 즉시 삭제합니다.</p>
+          </section>
+
+          <!-- 8. 사용자 권리 -->
+          <section class="mb-12 scroll-mt-28" id="rights">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">8. 사용자의 권리</h2>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">데이터 접근권</h4>
+                <p class="text-sm text-slate-600">저장된 데이터 확인 (앱 설정 메뉴에서 확인 가능)</p>
+              </div>
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">데이터 삭제권</h4>
+                <p class="text-sm text-slate-600">언제든지 앱 데이터 삭제 가능</p>
+              </div>
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">광고 개인화 거부권</h4>
+                <p class="text-sm text-slate-600">기기 설정에서 광고 ID 재설정 또는 개인화 광고 비활성화</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. 방침 변경 -->
+          <section class="mb-12 scroll-mt-28" id="changes">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">edit_note</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">9. 개인정보처리방침 변경</h2>
+            </div>
+            <p class="text-slate-700">본 방침이 변경되는 경우, 앱 내 공지 또는 이 페이지를 통해 안내드립니다. 중요한 변경사항은 시행 최소 <strong>7일 전</strong>에 고지합니다.</p>
+          </section>
+
+          <!-- 10. 연락처 -->
+          <section class="mb-12 scroll-mt-28" id="contact">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">mail</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">10. 연락처</h2>
+            </div>
+            <div class="rounded-2xl bg-primary p-8 text-center text-white">
+              <h3 class="text-xl font-bold mb-2">개인정보 관련 문의</h3>
+              <p class="text-blue-200 mb-6">개인정보 관련 문의사항이 있으시면 이메일로 연락해 주세요</p>
+              <a class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-primary hover:bg-slate-100 transition-colors" href="mailto:devran.6290@gmail.com">
+                <span class="material-symbols-outlined text-[20px]">send</span>
+                devran.6290@gmail.com
+              </a>
+              <p class="mt-6 text-sm text-blue-300">데브랜 (Devran)<br/>Seoul, Republic of Korea</p>
+            </div>
+          </section>
+        </div><!-- /ko -->
+
+        <!-- ══ English Section ══ -->
+        <div class="lang-section" id="section-en">
+          <p class="text-base leading-relaxed text-slate-700 mb-10">
+            <strong>Transy (데브랜 / devran)</strong> is a web novel translation app that uses AI (Google Gemini) to translate
+            foreign novels into Korean. We are committed to protecting your privacy and complying with applicable laws.
+          </p>
+
+          <!-- 1 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">database</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">1. Information We Collect</h2>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800 mb-3">1.1 User-Provided Information</h3>
+            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white mb-4">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-5 py-3 font-semibold text-primary">Type</th>
+                    <th class="px-5 py-3 font-semibold text-primary">Description</th>
+                    <th class="px-5 py-3 font-semibold text-primary">Storage</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">Gemini API Key</td>
+                    <td class="px-5 py-3 text-slate-600">Entered directly by the user to enable translation features</td>
+                    <td class="px-5 py-3 text-slate-600">Local device storage (encrypted)</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">Novel URLs</td>
+                    <td class="px-5 py-3 text-slate-600">Web novel addresses added by the user</td>
+                    <td class="px-5 py-3 text-slate-600">Local device storage</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">App Settings</td>
+                    <td class="px-5 py-3 text-slate-600">User preferences such as font size, TTS settings</td>
+                    <td class="px-5 py-3 text-slate-600">Local device storage</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-lg bg-blue-50 border-l-4 border-accent text-sm text-slate-700 mb-6">
+              <span class="material-symbols-outlined text-accent text-[20px] mt-0.5">info</span>
+              <span><strong>Important</strong>: All of the above information is stored only on the user's device and is never transmitted to developer servers.</span>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800 mb-3">1.2 Automatically Collected Information</h3>
+            <div class="overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <table class="w-full text-left text-sm">
+                <thead class="bg-slate-50">
+                  <tr>
+                    <th class="px-5 py-3 font-semibold text-primary">Type</th>
+                    <th class="px-5 py-3 font-semibold text-primary">Purpose</th>
+                    <th class="px-5 py-3 font-semibold text-primary">Collected By</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">Crash Logs</td>
+                    <td class="px-5 py-3 text-slate-600">App error analysis and quality improvement</td>
+                    <td class="px-5 py-3 text-slate-600">Firebase Crashlytics</td>
+                  </tr>
+                  <tr>
+                    <td class="px-5 py-3 font-medium text-slate-800">Advertising ID</td>
+                    <td class="px-5 py-3 text-slate-600">Providing personalized advertisements</td>
+                    <td class="px-5 py-3 text-slate-600">Google AdMob</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-red-50 text-red-500"><span class="material-symbols-outlined text-[24px]">block</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">2. Information We Do NOT Collect</h2>
+            </div>
+            <p class="text-slate-700 mb-4">The app does <strong>not</strong> collect the following:</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>Personal identification information (name, email address, phone number, etc.)</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>Financial information (in-app purchases are processed directly by Google Play Billing)</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>Location data</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>Contacts or photos</li>
+              <li class="flex items-center gap-3 p-3 rounded-lg bg-slate-50 text-sm text-slate-700"><span class="material-symbols-outlined text-red-400 text-[18px]">close</span>Information about other apps on the device</li>
+            </ul>
+          </section>
+
+          <!-- 3 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">target</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">3. How We Use Your Information</h2>
+            </div>
+            <p class="text-slate-700 mb-4">Collected information is used only for the following purposes:</p>
+            <ul class="space-y-4">
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">1</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">App Functionality</h3><p class="text-sm text-slate-600">Running the translation service and maintaining user preferences</p></div>
+              </li>
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">2</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">Quality Improvement</h3><p class="text-sm text-slate-600">Bug fixes through crash analysis</p></div>
+              </li>
+              <li class="flex gap-4 p-4 rounded-xl bg-slate-50">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white">3</span>
+                <div><h3 class="font-semibold text-slate-900 mb-1">Advertising</h3><p class="text-sm text-slate-600">Delivering ads through Google AdMob</p></div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- 4 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">share</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">4. Third-Party Services</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google Gemini API</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>Purpose</strong>: AI-powered translation service</div>
+                  <div><strong>Data Transmitted</strong>: Original novel text</div>
+                  <a class="text-accent text-xs hover:underline" href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Firebase Crashlytics</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>Purpose</strong>: Crash analysis and stability</div>
+                  <div><strong>Data Transmitted</strong>: Crash logs, device info (model, OS)</div>
+                  <a class="text-accent text-xs hover:underline" href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase Privacy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google AdMob</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>Purpose</strong>: Displaying advertisements</div>
+                  <div><strong>Data Transmitted</strong>: Advertising ID</div>
+                  <a class="text-accent text-xs hover:underline" href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">Google Ads Privacy →</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-slate-200 bg-white">
+                <div class="font-bold text-slate-900 mb-2">Google Play Billing</div>
+                <div class="text-sm text-slate-600 space-y-1">
+                  <div><strong>Purpose</strong>: In-app purchase processing</div>
+                  <div><strong>Data Transmitted</strong>: Handled directly by Google</div>
+                  <a class="text-accent text-xs hover:underline" href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" rel="noopener" target="_blank">Google Payments Privacy →</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">history</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">5. Data Retention and Deletion</h2>
+            </div>
+            <div class="space-y-4">
+              <div class="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                <h3 class="font-semibold text-slate-900 mb-2">5.1 Local Data</h3>
+                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                  <li>All user data is stored on the device</li>
+                  <li>All local data is automatically deleted when the app is uninstalled</li>
+                  <li>Data can be manually deleted at any time from the app's settings menu</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded-lg bg-slate-50 border border-slate-200">
+                <h3 class="font-semibold text-slate-900 mb-2">5.2 Third-Party Service Data</h3>
+                <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+                  <li>Data held by Firebase and AdMob is subject to each service's own retention policies</li>
+                  <li>To request deletion of your data, please contact us at the email address below</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-green-50 text-green-600"><span class="material-symbols-outlined text-[24px]">lock</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">6. Data Security</h2>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">key</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">Android Keystore</div>
+                <div class="text-xs text-slate-500">API keys encrypted at rest</div>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">https</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">HTTPS/TLS</div>
+                <div class="text-xs text-slate-500">All network traffic encrypted</div>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200 bg-white text-center">
+                <span class="material-symbols-outlined text-green-500 text-[32px] mb-2 block">cloud_off</span>
+                <div class="font-semibold text-slate-800 text-sm mb-1">No External Transmission</div>
+                <div class="text-xs text-slate-500">Sensitive data stays on device</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-purple-50 text-purple-600"><span class="material-symbols-outlined text-[24px]">child_care</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">7. Children's Privacy</h2>
+            </div>
+            <p class="text-slate-700">This app is <strong>not directed at children under the age of 13</strong>. We do not intentionally collect personal information from children under 13. If we become aware that such information has been collected, it will be deleted immediately.</p>
+          </section>
+
+          <!-- 8 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">verified_user</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">8. Your Rights</h2>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">Data Access</h4>
+                <p class="text-sm text-slate-600">View stored data through the app's settings menu</p>
+              </div>
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">Data Deletion</h4>
+                <p class="text-sm text-slate-600">Delete all app data at any time by uninstalling the app</p>
+              </div>
+              <div class="p-4 rounded-lg border border-slate-200 bg-white">
+                <h4 class="font-bold text-slate-900 mb-2">Opt-out of Personalized Ads</h4>
+                <p class="text-sm text-slate-600">Reset advertising ID or disable personalized ads in device settings</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">edit_note</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">9. Changes to This Privacy Policy</h2>
+            </div>
+            <p class="text-slate-700">If this policy changes, we will notify you through an in-app notice or on this page. Significant changes will be announced at least <strong>7 days</strong> before they take effect.</p>
+          </section>
+
+          <!-- 10 -->
+          <section class="mb-12 scroll-mt-28">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-blue-50 text-accent"><span class="material-symbols-outlined text-[24px]">mail</span></div>
+              <h2 class="text-2xl font-bold text-primary m-0">10. Contact Us</h2>
+            </div>
+            <div class="rounded-2xl bg-primary p-8 text-center text-white">
+              <h3 class="text-xl font-bold mb-2">Have questions about this policy?</h3>
+              <p class="text-blue-200 mb-6">If you have questions or comments about this policy, you may email us at:</p>
+              <a class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-primary hover:bg-slate-100 transition-colors" href="mailto:devran.6290@gmail.com">
+                <span class="material-symbols-outlined text-[20px]">send</span>
+                devran.6290@gmail.com
+              </a>
+              <p class="mt-6 text-sm text-blue-300">데브랜 (Devran)<br/>Seoul, Republic of Korea</p>
+              <p class="mt-3 text-xs text-blue-400"><em>This privacy policy is effective as of January 1, 2025.</em></p>
+            </div>
+          </section>
+        </div><!-- /en -->
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-slate-200 bg-white py-8 mt-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-sm text-slate-500">© 2025 데브랜 (Devran). All rights reserved.</p>
+    <a class="text-sm text-slate-500 hover:text-accent transition-colors" href="mailto:devran.6290@gmail.com">devran.6290@gmail.com</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('section-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-btn')[lang === 'ko' ? 0 : 1].classList.add('active');
+    document.getElementById('toc-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('toc-en').classList.toggle('hidden', lang !== 'en');
+    document.getElementById('toc-label').textContent = lang === 'ko' ? '목차' : 'Contents';
+  }
+</script>
+</body></html>

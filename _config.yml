@@ -1,0 +1,11 @@
+theme: jekyll-theme-cayman
+title: Transy by 데브랜
+description: AI 기반 웹소설 번역 앱 — Gemini AI 번역, 컨텍스트 시스템, 미리 받기
+show_downloads: false
+permalink: pretty
+header_pages:
+  - index.md
+  - about.md
+  - faq.md
+  - disclaimer.md
+  - privacy-policy.html
